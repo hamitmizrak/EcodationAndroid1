@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EcodationAndroid</string>
+    <string name="hamit_mizrak">Hamit Mızrak</string>
+    <string name="adi">Adı</string>
+    <string name="soyadi">Soyadı</string>
+    <string name="submit">Gönder</string>
+</resources>

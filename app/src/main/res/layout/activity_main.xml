@@ -7,13 +7,20 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!--glide-->
+   <!-- FAB: her zaman bir button-->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fab"/>
+
+
+    <!--glide:internetteki resimleri almak-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/imageViewGlide"/>
 
-    <!--icon-->
+    <!--icon: kendi iconumu olusturdum-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"

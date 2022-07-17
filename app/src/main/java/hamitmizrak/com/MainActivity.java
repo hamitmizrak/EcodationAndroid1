@@ -14,9 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     //Global Variable
+
+    //FAB
+    FloatingActionButton floatingActionButton;
+
+    //Glide:internetteki resimleri almak
     ImageView imageViewGlide;
 
     //ornek
@@ -32,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
+
+        //fab
+        floatingActionButton=findViewById(R.id.fab);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Fab çalıştı",Toast.LENGTH_LONG).show();
+            }
+        });
 
         //AlertDialog
         AlertDialog.Builder alertBuilder=new AlertDialog.Builder(MainActivity.this);
@@ -76,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.e("Title","Click success");
                 String editData=editText.getText().toString();
+                Toast.makeText(getApplicationContext(),editData,Toast.LENGTH_LONG).show();
                 textView.setText(editData);
             }
         });

@@ -14,6 +14,11 @@
         android:src="@drawable/benim_bus"
         android:id="@+id/circleViewExam1"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewExam1"/>
+
     <!--textView-->
     <TextView
         android:layout_width="match_parent"

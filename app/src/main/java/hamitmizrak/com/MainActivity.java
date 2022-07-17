@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     EditText editText;
     Button button;
+    ImageView imageView;
 
 
     //projemiz açıldığında ilk görünen sayfadır.
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.textViewExam1);
         editText=findViewById(R.id.editTextExamp1);
         button=findViewById(R.id.buttonExamp1);
+        imageView=findViewById(R.id.imageViewExam1);
+        imageView.setImageResource(R.drawable.flowers);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,6 +7,43 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!--icon-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/benim_bus"
+        android:id="@+id/circleViewExam1"/>
+
+    <!--textView-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Data"
+        android:id="@+id/textViewExam1"/>
+
+    <!--editText-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editTextExamp1"/>
+
+    <!-- Button -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Gönder"
+        android:id="@+id/buttonExamp1"/>
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/circleView1"
+        android:src="@drawable/benim_vector"
+        app:civ_border_color="#FF000000"/>
+
     <ImageView
         android:id="@+id/imgaView1"
         android:layout_width="match_parent"

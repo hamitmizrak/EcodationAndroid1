@@ -11,7 +11,7 @@
         android:id="@+id/otherListView"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#0E0E0E"
+        android:background="@color/black"
         android:textColor="#ffffff"
         android:text="ListView" />
 

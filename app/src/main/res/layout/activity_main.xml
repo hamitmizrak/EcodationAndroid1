@@ -7,32 +7,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!--radioGroup-->
-    <RadioGroup
+    <Button
+        android:id="@+id/otherListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroupId">
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Bayan"
-            android:id="@+id/radioButton1"/>
+        android:layout_height="55dp"
+        android:background="#0E0E0E"
+        android:textColor="#ffffff"
+        android:text="ListView" />
 
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Erkek"
-            android:id="@+id/radioButton2"/>
-    </RadioGroup>
+    <!--activiyler arasında veri taşımak-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/editTextOtherActivityDataSubmit"
+        android:hint="Diğer Activity için yazınız..."/>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Radio Button Submit"
-        android:id="@+id/buttonRadioId"/>
+        android:layout_height="65dp"
+        android:id="@+id/buttonOtherActivityData"
+        android:text="Gönder"/>
 
 
-
+<!--activity arasında geçiş sağlansın-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Diğer Activity Gender Git"
+        android:id="@+id/otherActivityRadioGroupId"/>
 
     <!--firebase telephone login-->
     <EditText

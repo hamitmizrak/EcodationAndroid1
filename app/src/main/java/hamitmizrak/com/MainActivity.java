@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,12 +30,15 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
-    //radio Button
-    Button buttonRadio;
-    RadioGroup radioGroup;
-    RadioButton radioButton1;
-    RadioButton radioButton2;
+    //ListViewIndent
+    Button otherListViewButton;
 
+    //Diğer Activity veri taşımak
+    EditText editTextOtherActivityDataSubmit;
+    Button buttonOtherActivityData;
+
+    //Diğer Activity Geçiş
+    Button otherActivityButton;
 
     //firebase login Telephone
     FirebaseAuth firebaseAuth;
@@ -44,13 +48,11 @@ public class MainActivity extends AppCompatActivity {
     PhoneAuthProvider.OnVerificationStateChangedCallbacks myCallBack;
     String verificationId;
 
-
     //Doğrulamayı başlatan metot
     public void startVerification() {
         //60saniye boyunca girebilsin yoksa  kod iptal olur
         PhoneAuthProvider.getInstance().verifyPhoneNumber(editTextValidationPhoneNumber.getText().toString(), 60, TimeUnit.SECONDS, this, myCallBack);
     }
-
 
     //ProgressBar
     ProgressBar progressBar;
@@ -75,28 +77,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
 
-        //RadioButton
-        radioGroup = findViewById(R.id.radioGroupId);
-        radioButton1 = findViewById(R.id.radioButton1);
-        radioButton1 = findViewById(R.id.radioButton2);
-        buttonRadio = findViewById(R.id.buttonRadioId);
 
-        buttonRadio.setOnClickListener(new View.OnClickListener() {
+        //ListViewButton
+        otherListViewButton=findViewById(R.id.otherListView);
+        otherListViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int radioCheckButtonId = radioGroup.getCheckedRadioButtonId();
-                switch (radioCheckButtonId) {
-                    case R.id.radioButton1:
-                        String value1 = "Bayan Seçildi";
-                        System.out.println("Bayan Seçildi");
-                        Toast.makeText(getApplicationContext(), value1, Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.radioButton2:
-                        System.out.println("Erkek Seçildi");
-                        String value2 = "Erkek Seçildi";
-                        Toast.makeText(getApplicationContext(), value2, Toast.LENGTH_LONG).show();
-                        break;
-                }
+                Intent listViewIntent=new Intent(getApplicationContext(),ListViewActivity.class);
+                String data="ListView Activity Geçiş yapıldı";
+                Toast.makeText(getApplicationContext(),data,Toast.LENGTH_LONG).show();
+                startActivity(listViewIntent);
+            }
+        });
+
+        //Diğer Activity arasında veri göndermek
+        editTextOtherActivityDataSubmit=findViewById(R.id.editTextOtherActivityDataSubmit);
+        buttonOtherActivityData=findViewById(R.id.buttonOtherActivityData);
+        buttonOtherActivityData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),GenderActivity.class);
+              String editData=  editTextOtherActivityDataSubmit.getText().toString();
+              intent.putExtra("key_activity",editData);
+                Toast.makeText(getApplicationContext(),"Diğer Activity'e gödnerildi",Toast.LENGTH_LONG).show();
+              startActivity(intent);
+            }
+        });
+
+        //Diğer Activity Geçiş
+         otherActivityButton=findViewById(R.id.otherActivityRadioGroupId);
+         otherActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),GenderActivity.class);
+                String data="Cinsiyet Activity Geçiş yapıldı";
+                Toast.makeText(getApplicationContext(),data,Toast.LENGTH_LONG).show();
+                startActivity(intent);
             }
         });
 

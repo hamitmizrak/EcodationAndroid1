@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GenderActivity">
+
+
+   <!-- gelen activity verisi almak ve göstermek-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/textViewIndentKey"/>
+
+    <!--radioGroup-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupId">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Bayan"
+            android:id="@+id/radioButton1"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Erkek"
+            android:id="@+id/radioButton2"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Radio Button Submit"
+        android:id="@+id/buttonRadioId"/>
+
+</LinearLayout>

@@ -2,10 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="hamitmizrak.com">
-
-    <!--izin almamız-->
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <!-- izin almamız -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -18,9 +17,14 @@
         android:theme="@style/Theme.EcodationAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".HamitMizrak"
+            android:name=".ListViewActivity"
             android:exported="false" />
-        <!-- MAIN: ilk acilacak ekran -->
+        <activity
+            android:name=".GenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HamitMizrak"
+            android:exported="false" /> <!-- MAIN: ilk acilacak ekran -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

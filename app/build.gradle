@@ -27,6 +27,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -41,4 +42,22 @@ dependencies {
    /* Glide:internetteki resimleri almak*/
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    /*firebase*/
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    /* firebase email password Authentication Asistans*/
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+
+    /* firebase realtime database */
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+
+    /* firebase  Storage*/
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+
 }
+
+/*firebase*/
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'

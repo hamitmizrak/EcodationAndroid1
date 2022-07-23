@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "924277576807",
+    "project_id": "fir-tutorials-efbb8",
+    "storage_bucket": "fir-tutorials-efbb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924277576807:android:5c98c25d3033da87da30c2",
+        "android_client_info": {
+          "package_name": "hamitmizrak.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924277576807-egctql3eo9dr6nrkno8u4t40b0jk2m00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hamitmizrak.com",
+            "certificate_hash": "2bed44dad9cca482f9d79290f6d4a12a9b7def09"
+          }
+        },
+        {
+          "client_id": "924277576807-jf3t8smnthufb3153k7esrbqk7sr5ngt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5HJ5FbCbRBpUgIlNVHDPrrr8AYjEywzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924277576807-jf3t8smnthufb3153k7esrbqk7sr5ngt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

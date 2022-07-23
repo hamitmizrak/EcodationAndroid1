@@ -7,6 +7,59 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!--radioGroup-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupId">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Bayan"
+            android:id="@+id/radioButton1"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Erkek"
+            android:id="@+id/radioButton2"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Radio Button Submit"
+        android:id="@+id/buttonRadioId"/>
+
+
+
+
+    <!--firebase telephone login-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/validationPhoneNumber"
+        android:hint="Telefon numaranız +90 xxxyyyzzmm"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/validationButton"
+        android:textColor="#ffffff"
+        android:text="İstek At"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/validationCodeNumber"
+        android:hint="Valication Code"
+        android:inputType="textPassword"
+        android:gravity="center"
+     />
+
+
+
    <!-- FAB: her zaman bir button-->
 <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:layout_width="wrap_content"

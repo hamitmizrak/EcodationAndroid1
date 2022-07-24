@@ -1,5 +1,9 @@
 package hamitmizrak.com;
 
+import lombok.Getter;
+import lombok.Setter;
+
+
 public class Message {
 
     //field

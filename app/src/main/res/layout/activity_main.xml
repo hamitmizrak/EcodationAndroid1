@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <!--reCycleView-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/reCycleViewId"
+        android:text="ReCycleView"/>
+
+
+
     <Button
         android:id="@+id/otherListView"
         android:layout_width="match_parent"

@@ -30,6 +30,9 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
+    //ReCycleView Button
+    Button reCycleViewId;
+
     //ListViewIndent
     Button otherListViewButton;
 
@@ -78,40 +81,51 @@ public class MainActivity extends AppCompatActivity {
         //Log.e("onCreate", "ilk açılan");
 
 
+        //reCycleView
+        reCycleViewId = findViewById(R.id.reCycleViewId);
+        reCycleViewId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent reCycleIntent = new Intent(getApplicationContext(), ReCycleViewActivity.class);
+                Toast.makeText(getApplicationContext(), "Re Cycle View Activity Geçiş yapıldı", Toast.LENGTH_LONG).show();
+                startActivity(reCycleIntent);
+            }
+        });
+
         //ListViewButton
-        otherListViewButton=findViewById(R.id.otherListView);
+        otherListViewButton = findViewById(R.id.otherListView);
         otherListViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listViewIntent=new Intent(getApplicationContext(),ListViewActivity.class);
-                String data="ListView Activity Geçiş yapıldı";
-                Toast.makeText(getApplicationContext(),data,Toast.LENGTH_LONG).show();
+                Intent listViewIntent = new Intent(getApplicationContext(), ListViewActivity.class);
+                String data = "ListView Activity Geçiş yapıldı";
+                Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
                 startActivity(listViewIntent);
             }
         });
 
         //Diğer Activity arasında veri göndermek
-        editTextOtherActivityDataSubmit=findViewById(R.id.editTextOtherActivityDataSubmit);
-        buttonOtherActivityData=findViewById(R.id.buttonOtherActivityData);
+        editTextOtherActivityDataSubmit = findViewById(R.id.editTextOtherActivityDataSubmit);
+        buttonOtherActivityData = findViewById(R.id.buttonOtherActivityData);
         buttonOtherActivityData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),GenderActivity.class);
-              String editData=  editTextOtherActivityDataSubmit.getText().toString();
-              intent.putExtra("key_activity",editData);
-                Toast.makeText(getApplicationContext(),"Diğer Activity'e gödnerildi",Toast.LENGTH_LONG).show();
-              startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), GenderActivity.class);
+                String editData = editTextOtherActivityDataSubmit.getText().toString();
+                intent.putExtra("key_activity", editData);
+                Toast.makeText(getApplicationContext(), "Diğer Activity'e gödnerildi", Toast.LENGTH_LONG).show();
+                startActivity(intent);
             }
         });
 
         //Diğer Activity Geçiş
-         otherActivityButton=findViewById(R.id.otherActivityRadioGroupId);
-         otherActivityButton.setOnClickListener(new View.OnClickListener() {
+        otherActivityButton = findViewById(R.id.otherActivityRadioGroupId);
+        otherActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),GenderActivity.class);
-                String data="Cinsiyet Activity Geçiş yapıldı";
-                Toast.makeText(getApplicationContext(),data,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), GenderActivity.class);
+                String data = "Cinsiyet Activity Geçiş yapıldı";
+                Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
                 startActivity(intent);
             }
         });

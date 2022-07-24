@@ -8,13 +8,12 @@
     tools:context=".MainActivity">
 
 
-    <!--reCycleView-->
+    <!--reCycleView Button-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:id="@+id/reCycleViewId"
-        android:text="ReCycleView"/>
-
+        android:text="ReCycleView Button"/>
 
 
     <Button

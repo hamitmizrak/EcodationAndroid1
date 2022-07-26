@@ -30,6 +30,9 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
+    //realtime Database
+    Button realtimeDatabase;
+
     //ReCycleView Button
     Button reCycleViewId;
 
@@ -80,6 +83,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
 
+        //realtimeDatabase
+        realtimeDatabase=findViewById(R.id.realtimeDatabase);
+        realtimeDatabase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent reCycleIntent = new Intent(getApplicationContext(), RealtimeDatabaseActivity.class);
+                Toast.makeText(getApplicationContext(), "Realtime database Activity Geçiş yapıldı", Toast.LENGTH_LONG).show();
+                startActivity(reCycleIntent);
+            }
+        });
 
         //reCycleView
         reCycleViewId = findViewById(R.id.reCycleViewId);

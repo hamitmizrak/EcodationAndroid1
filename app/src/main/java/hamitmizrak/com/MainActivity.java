@@ -30,6 +30,9 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
+    //local storage
+    Button localStorageButton;
+
     //realtime Database
     Button realtimeDatabase;
 
@@ -82,6 +85,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
+
+
+        //localStorage
+        localStorageButton=findViewById(R.id.localStorageButton);
+        localStorageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent localStorage=new Intent(getApplicationContext(),LocalStorageView.class);
+                Toast.makeText(getApplicationContext(),"Local Storage Giriliyor",Toast.LENGTH_LONG);
+                startActivity(localStorage);
+            }
+        });
 
         //realtimeDatabase
         realtimeDatabase=findViewById(R.id.realtimeDatabase);

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.EcodationAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".LocalStorageView"
+            android:exported="false" />
+        <activity
             android:name=".RealtimeDatabaseActivity"
             android:exported="false" />
         <activity

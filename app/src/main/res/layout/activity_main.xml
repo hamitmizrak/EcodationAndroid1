@@ -8,6 +8,14 @@
     tools:context=".MainActivity">
 
 
+    <!--menu-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/menuButtonId"
+        android:text="Menu Click"/>
+
+
     <!--localstorage -->
     <Button
        android:layout_width="wrap_content"

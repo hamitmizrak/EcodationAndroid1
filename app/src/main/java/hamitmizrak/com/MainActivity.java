@@ -30,6 +30,10 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
+
+    //Menu Button
+    Button menuButtonId;
+
     //local storage
     Button localStorageButton;
 
@@ -86,20 +90,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
 
+       //menuButton
+        menuButtonId = findViewById(R.id.menuButtonId);
+        menuButtonId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent menuIntent=new Intent(getApplicationContext(),MenuActivity.class);
+                Toast.makeText(getApplicationContext(),"Menu Activity Geçiş yapıldı",Toast.LENGTH_SHORT);
+                startActivity(menuIntent);
+            }
+        });
 
         //localStorage
-        localStorageButton=findViewById(R.id.localStorageButton);
+        localStorageButton = findViewById(R.id.localStorageButton);
         localStorageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent localStorage=new Intent(getApplicationContext(),LocalStorageView.class);
-                Toast.makeText(getApplicationContext(),"Local Storage Giriliyor",Toast.LENGTH_LONG);
+                Intent localStorage = new Intent(getApplicationContext(), LocalStorageView.class);
+                Toast.makeText(getApplicationContext(), "Local Storage Giriliyor", Toast.LENGTH_LONG);
                 startActivity(localStorage);
             }
         });
 
         //realtimeDatabase
-        realtimeDatabase=findViewById(R.id.realtimeDatabase);
+        realtimeDatabase = findViewById(R.id.realtimeDatabase);
         realtimeDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -8,6 +8,14 @@
     tools:context=".MainActivity">
 
 
+    <!--fragment-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/fragmentButtonId"
+        android:text="Fragment Click"
+        />
+
     <!--menu-->
     <Button
         android:layout_width="match_parent"

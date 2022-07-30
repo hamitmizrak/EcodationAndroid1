@@ -30,6 +30,9 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
+    //Fragment
+    Button fragmentButtonId;
+
 
     //Menu Button
     Button menuButtonId;
@@ -89,6 +92,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
+
+
+        //fragment
+        fragmentButtonId=findViewById(R.id.fragmentButtonId);
+        fragmentButtonId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fragmentIntent=new Intent(getApplicationContext(),SomePageDataActivity.class);
+                Toast.makeText(getApplicationContext(),"Fragment Activity Geçiş yapıldı",Toast.LENGTH_SHORT);
+                startActivity(fragmentIntent);
+            }
+        });
 
        //menuButton
         menuButtonId = findViewById(R.id.menuButtonId);

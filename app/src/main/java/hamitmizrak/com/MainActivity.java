@@ -126,7 +126,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //fragment
+        fragmentButtonId = findViewById(R.id.fragmentButtonId);
+        fragmentButtonId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fragmentIntent = new Intent(getApplicationContext(), SomePageDataActivity.class);
+                Toast.makeText(getApplicationContext(), "Fragment Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
+                startActivity(fragmentIntent);
+            }
+        });
 
         //menuButton
         menuButtonId = findViewById(R.id.menuButtonId);

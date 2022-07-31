@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
     <!--Kamera-->
-    <Button android:layout_width="match_parent"
-        android:layout_height="80dp"
+    <Button
         android:id="@+id/cameraPermissionButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:text="Camera İzin" />
 
     <!--Konum-->
-    <Button android:layout_width="match_parent"
-        android:layout_height="80dp"
+    <Button
         android:id="@+id/locationPermissionButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:text="Konum İzin" />
 
 
     <!--fragment-->
     <Button
+        android:id="@+id/fragmentButtonId"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:id="@+id/fragmentButtonId"
-        android:text="Fragment Click"
-        />
+        android:text="Fragment Click" />
 
     <!--menu-->
     <Button
+        android:id="@+id/menuButtonId"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/menuButtonId"
-        android:text="Menu Click"/>
+        android:text="Menu Click" />
 
 
     <!--localstorage -->
     <Button
-       android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:id="@+id/localStorageButton"/>
+        android:id="@+id/localStorageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp" />
 
     <!--realtimeDatabase-->
     <Button
@@ -48,134 +58,128 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/black"
-        android:textColor="#ffffff"
-        android:text="Realtime database Geçiş" />
+        android:text="Realtime database Geçiş"
+        android:textColor="#ffffff" />
 
 
     <!--reCycleView Button-->
     <Button
+        android:id="@+id/reCycleViewId"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:id="@+id/reCycleViewId"
-        android:text="ReCycleView Button"/>
+        android:text="ReCycleView Button" />
 
-<!--listview-->
+    <!--listview-->
     <Button
         android:id="@+id/otherListView"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/black"
-        android:textColor="#ffffff"
-        android:text="ListView" />
+        android:text="ListView"
+        android:textColor="#ffffff" />
 
     <!--activiyler arasında veri taşımak-->
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
         android:id="@+id/editTextOtherActivityDataSubmit"
-        android:hint="Diğer Activity için yazınız..."/>
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:hint="Diğer Activity için yazınız..." />
+
+    <Button
         android:id="@+id/buttonOtherActivityData"
-        android:text="Gönder"/>
-
-
-<!--activity arasında geçiş sağlansın-->
-    <Button
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Diğer Activity Gender Git"
-        android:id="@+id/otherActivityRadioGroupId"/>
+        android:text="Gönder" />
+
+
+    <!--activity arasında geçiş sağlansın-->
+    <Button
+        android:id="@+id/otherActivityRadioGroupId"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Diğer Activity Gender Git" />
 
     <!--firebase telephone login-->
     <EditText
+        android:id="@+id/validationPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:id="@+id/validationPhoneNumber"
-        android:hint="Telefon numaranız +90 xxxyyyzzmm"
-        />
+        android:hint="Telefon numaranız +90 xxxyyyzzmm" />
+
     <Button
+        android:id="@+id/validationButton"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:id="@+id/validationButton"
-        android:textColor="#ffffff"
         android:text="İstek At"
-        />
+        android:textColor="#ffffff" />
 
     <EditText
+        android:id="@+id/validationCodeNumber"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:id="@+id/validationCodeNumber"
-        android:hint="Valication Code"
-        android:inputType="textPassword"
         android:gravity="center"
-     />
+        android:hint="Valication Code"
+        android:inputType="textPassword" />
 
 
-
-   <!-- FAB: her zaman bir button-->
-<com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/fab"/>
+    <!-- FAB: her zaman bir button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
     <!--progressBar:-->
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <!--glide:internetteki resimleri almak-->
     <ImageView
+        android:id="@+id/imageViewGlide"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/imageViewGlide"/>
+        android:layout_height="100dp" />
 
     <!--icon: kendi iconumu olusturdum-->
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleViewExam1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/benim_bus"
-        android:id="@+id/circleViewExam1"/>
+        android:src="@drawable/benim_bus" />
 
     <ImageView
+        android:id="@+id/imageViewExam1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/imageViewExam1"/>
+        android:layout_height="100dp" />
 
     <!--textView-->
     <TextView
+        android:id="@+id/textViewExam1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Data"
-        android:id="@+id/textViewExam1"/>
+        android:text="Data" />
 
     <!--editText-->
     <EditText
+        android:id="@+id/editTextExamp1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/editTextExamp1"/>
+        android:layout_height="50dp" />
 
     <!-- Button -->
     <Button
+        android:id="@+id/buttonExamp1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Gönder"
-        android:id="@+id/buttonExamp1"/>
-
-
+        android:text="Gönder" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleView1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/circleView1"
         android:src="@drawable/benim_vector"
-        app:civ_border_color="#FF000000"/>
+        app:civ_border_color="#FF000000" />
 
     <ImageView
         android:id="@+id/imgaView1"
@@ -209,4 +213,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/submit" />
-</LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -28,6 +28,23 @@ public class LocationActivity extends AppCompatActivity {
         }
     }
 
+    //camera requestCode karşılaştırmasını sağlanacak metot
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        //KONUM
+        //isPermissionLocation ==> requestCode yani 23 sayısını karşılaştıracağım
+        if (requestCode == 23 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(getApplicationContext(), "Konum 23 eşleşmesi yapıldı", Toast.LENGTH_SHORT).show();
+            //eğer eşleşme olursa bizim konumumuzu yani enlem ve boylam gösteren metot çalışsın
+            getLocationLongitudeLatitude();
+        } else {
+            Toast.makeText(getApplicationContext(), "!!!! Konum 23 eşleşmesi yapılmadı", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     //Bizim enlem ve boylamı bulan metot
     private void getLocationLongitudeLatitude() {
         //konum izinleri verilmişse
@@ -48,22 +65,7 @@ public class LocationActivity extends AppCompatActivity {
         }
     }
 
-    //camera requestCode karşılaştırmasını sağlanacak metot
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        //KONUM
-        //isPermissionLocation ==> requestCode yani 23 sayısını karşılaştıracağım
-        if (requestCode == 23 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(getApplicationContext(), "Konum 23 eşleşmesi yapıldı", Toast.LENGTH_SHORT).show();
-            //eğer eşleşme olursa bizim konumumuzu yani enlem ve boylam gösteren metot çalışsın
-            getLocationLongitudeLatitude();
-        } else {
-            Toast.makeText(getApplicationContext(), "!!!! Konum 23 eşleşmesi yapılmadı", Toast.LENGTH_SHORT).show();
-        }
-
-    }
 
 
     @Override

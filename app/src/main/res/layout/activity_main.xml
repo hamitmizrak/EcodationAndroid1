@@ -7,6 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!--Kamera-->
+    <Button android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/cameraPermissionButton"
+        android:text="Camera İzin" />
+
+    <!--Konum-->
+    <Button android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/locationPermissionButton"
+        android:text="Konum İzin" />
+
 
     <!--fragment-->
     <Button

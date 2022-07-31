@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="hamitmizrak.com">
     <!-- izin almamız -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- internet izini -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- camera izini -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- location izni -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcodationAndroid"
         tools:targetApi="31">
+        <activity
+            android:name=".LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
         <activity
             android:name=".SomePageDataActivity"
             android:exported="false" />

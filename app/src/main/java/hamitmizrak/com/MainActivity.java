@@ -3,9 +3,14 @@ package hamitmizrak.com;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,9 +35,14 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     //Global Variable
 
+    //Kamera
+    Button cameraPermissionButton;
+
+    //Konum
+    Button locationPermissionButton;
+
     //Fragment
     Button fragmentButtonId;
-
 
     //Menu Button
     Button menuButtonId;
@@ -64,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     PhoneAuthProvider.OnVerificationStateChangedCallbacks myCallBack;
     String verificationId;
 
+
     //Doğrulamayı başlatan metot
     public void startVerification() {
         //60saniye boyunca girebilsin yoksa  kod iptal olur
@@ -85,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     ImageView imageView;
 
-
+    ////////////////////////////////////////////
     //projemiz açıldığında ilk görünen sayfadır.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,25 +104,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
 
+        //Kamera
+         cameraPermissionButton=findViewById(R.id.cameraPermissionButton);
+         cameraPermissionButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 Intent cameraIntent = new Intent(getApplicationContext(), CameraActivity.class);
+                 Toast.makeText(getApplicationContext(), "Kamera Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
+                 startActivity(cameraIntent);
+             }
+         });
 
-        //fragment
-        fragmentButtonId=findViewById(R.id.fragmentButtonId);
-        fragmentButtonId.setOnClickListener(new View.OnClickListener() {
+        //Konum
+         locationPermissionButton=findViewById(R.id.locationPermissionButton);
+        locationPermissionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent fragmentIntent=new Intent(getApplicationContext(),SomePageDataActivity.class);
-                Toast.makeText(getApplicationContext(),"Fragment Activity Geçiş yapıldı",Toast.LENGTH_SHORT);
-                startActivity(fragmentIntent);
+                Intent locationIntent = new Intent(getApplicationContext(), LocationActivity.class);
+                Toast.makeText(getApplicationContext(), "Konum Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
+                startActivity(locationIntent);
             }
         });
 
-       //menuButton
+
+
+        //menuButton
         menuButtonId = findViewById(R.id.menuButtonId);
         menuButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent menuIntent=new Intent(getApplicationContext(),MenuActivity.class);
-                Toast.makeText(getApplicationContext(),"Menu Activity Geçiş yapıldı",Toast.LENGTH_SHORT);
+                Intent menuIntent = new Intent(getApplicationContext(), MenuActivity.class);
+                Toast.makeText(getApplicationContext(), "Menu Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
                 startActivity(menuIntent);
             }
         });

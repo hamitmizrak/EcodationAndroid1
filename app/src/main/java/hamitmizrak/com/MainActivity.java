@@ -34,6 +34,10 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     //Global Variable
+
+    //Firebase Telephone Validation Login
+    Button firebaseLoginIndentButton;
+
     // shared Preferencences
     Button preferencesIndentButton;
 
@@ -105,6 +109,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
+
+        //Firebase Validation Login
+        firebaseLoginIndentButton=findViewById(R.id.firebaseLoginIndentButton);
+        firebaseLoginIndentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent firebaseIndent = new Intent(getApplicationContext(), FirebaseTelephoneValidationActivity.class);
+                Toast.makeText(getApplicationContext(), "Firebase Telephone Validation Activity Indent Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
+                startActivity(firebaseIndent);
+            }
+        });
 
         //Shared Preferencences
         preferencesIndentButton=findViewById(R.id.preferencesIndentButton);

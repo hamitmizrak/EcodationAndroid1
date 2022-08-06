@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "924277576807",
-    "project_id": "fir-tutorials-efbb8",
-    "storage_bucket": "fir-tutorials-efbb8.appspot.com"
+    "project_number": "849017142311",
+    "project_id": "ecodationandroid1",
+    "storage_bucket": "ecodationandroid1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:924277576807:android:5c98c25d3033da87da30c2",
+        "mobilesdk_app_id": "1:849017142311:android:7ab77dfeee9f313180e202",
         "android_client_info": {
-          "package_name": "hamitmizrak.com"
+          "package_name": "com.ecodation.android1"
         }
       },
       "oauth_client": [
         {
-          "client_id": "924277576807-egctql3eo9dr6nrkno8u4t40b0jk2m00.apps.googleusercontent.com",
+          "client_id": "849017142311-oirjv0072spg5lshdacij4d085sta4g9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "hamitmizrak.com",
+            "package_name": "com.ecodation.android1",
             "certificate_hash": "2bed44dad9cca482f9d79290f6d4a12a9b7def09"
           }
         },
         {
-          "client_id": "924277576807-jf3t8smnthufb3153k7esrbqk7sr5ngt.apps.googleusercontent.com",
+          "client_id": "849017142311-fpm4oeu040d7qknpdfi8ln7ojgqeie60.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5HJ5FbCbRBpUgIlNVHDPrrr8AYjEywzM"
+          "current_key": "AIzaSyCvkmK4ZB_2gj2gMUFx2mwvn2KPIUsKePk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "924277576807-jf3t8smnthufb3153k7esrbqk7sr5ngt.apps.googleusercontent.com",
+              "client_id": "849017142311-fpm4oeu040d7qknpdfi8ln7ojgqeie60.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

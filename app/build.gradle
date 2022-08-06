@@ -45,17 +45,17 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
-    /*firebase*/
+    /*firebase ==> web sitesinde */
     implementation platform('com.google.firebase:firebase-bom:30.2.0')
     implementation 'com.google.firebase:firebase-analytics'
 
-    /* firebase email password Authentication Asistans*/
+    /* firebase uygulamada Firebase Assistan ==> email password Authentication Asistans*/
     implementation 'com.google.firebase:firebase-auth:19.2.0'
 
-    /* firebase realtime database */
+    /* firebase uygulamada Firebase Assistan ==> realtime database */
     implementation 'com.google.firebase:firebase-database:19.2.1'
 
-    /* firebase  Storage*/
+    /* firebase uygulamada Firebase Assistan ==>  Storage*/
     implementation 'com.google.firebase:firebase-storage:19.1.1'
 
 }

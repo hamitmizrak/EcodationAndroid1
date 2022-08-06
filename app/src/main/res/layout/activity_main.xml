@@ -12,6 +12,8 @@
     android:paddingBottom="16dp"
     tools:context=".MainActivity">
 
+
+
     <!--scrollView-->
     <ScrollView
         android:layout_width="match_parent"
@@ -22,6 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <!--firebase telephone login-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:id="@+id/firebaseLoginIndentButton"
+                android:text="Firebase Phone Validation "/>
 
             <Button
                 android:layout_width="wrap_content"

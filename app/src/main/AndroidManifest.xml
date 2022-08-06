@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- camera izini -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- location izni -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Telefon Rehberi -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcodationAndroid"
         tools:targetApi="31">
+        <activity
+            android:name=".SharedPreferencesActivity"
+            android:exported="false" />
         <activity
             android:name=".LocationActivity"
             android:exported="false" />

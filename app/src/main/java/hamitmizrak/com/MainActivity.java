@@ -34,6 +34,8 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     //Global Variable
+    // shared Preferencences
+    Button preferencesIndentButton;
 
     //Kamera
     Button cameraPermissionButton;
@@ -103,6 +105,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
+
+        //Shared Preferencences
+        preferencesIndentButton=findViewById(R.id.preferencesIndentButton);
+        preferencesIndentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent prefencesIndent = new Intent(getApplicationContext(), SharedPreferencesActivity.class);
+                Toast.makeText(getApplicationContext(), "Shared prefences Indent Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
+                startActivity(prefencesIndent);
+            }
+        });
 
         //Kamera
          cameraPermissionButton=findViewById(R.id.cameraPermissionButton);
